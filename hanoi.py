@@ -1,5 +1,7 @@
 def hanoi(n):
+    # Número de discos.
     discos = n
+    # Número dos movimentos.
     tamanhoMax = int(2 ** discos) - 1
     sequenciaPares = []
     sequenciaImpares = []
@@ -7,9 +9,11 @@ def hanoi(n):
     indexImpar = 0
 
     if discos % 2 == 0:
+        # Se o número de discos for par.
         sequenciaPares = ["1-->2", "2-->3", "3-->1"]
         sequenciaImpares = ["1-->3", "1-->2", "3-->2"]
     else:
+        # Se o número de discos for impar.
         sequenciaPares = ["1-->3", "3-->2", "2-->1"]
         sequenciaImpares = ["1-->2", "1-->3", "2-->3"]
 
